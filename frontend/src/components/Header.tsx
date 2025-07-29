@@ -16,9 +16,9 @@ export function Header() {
 
   return (
     <header className="bg-gray-900 text-white shadow-md">
-      <div className="max-w-screen-xl mx-auto px-1 py-4.5 flex items-center justify-between">
+      <div className="max-w-screen-xl mx-auto px-4 py-4 flex flex-wrap items-center justify-between">
         {/* Logo ou título */}
-        <h1 className="text-5xl font-bold mx-5">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold flex-shrink-0 break-words ml-12 pt-3">
           Luciana{" "}
           <span className="underline-animation-lash relative cursor-pointer">
             Lash-Designer
@@ -59,18 +59,21 @@ export function Header() {
         <nav
           className={`${
             open ? "block" : "hidden"
-          } w-full lg:flex lg:items-center lg:w-auto lg:space-x-6 mx-1`}
+          } w-full lg:flex lg:items-center lg:w-auto lg:space-x-6 mt-4 lg:mt-0`}
         >
-          <ul className="mt-3 lg:mt-0 flex flex-col lg:flex-row gap-2 lg:gap-8 text-center text-xl font-bold">
+          <ul className="flex flex-col lg:flex-row gap-2 lg:gap-6 text-center font-bold text-lg">
             {menuItems.map((item) => (
-              <li key={item.path}>
+              <li
+                key={item.path}
+                className="w-full lg:w-auto break-words bg-yellow-200 rounded-xl hover:bg-amber-400 transition-all duration-300"
+              >
                 <Link
                   to={item.path}
                   onClick={() => setOpen(false)}
-                  className={`block px-4 py-2 rounded transition-colors duration-200${
+                  className={`block px-4 py-2.5 rounded transition-colors duration-200 whitespace-normal ${
                     location.pathname === item.path
-                      ? "text-yellow-400 font-bold"
-                      : "text-gray-300 hover:text-yellow-400 hover:underline"
+                      ? "text-yellow-600 font-bold"
+                      : "text-black hover:underline"
                   }`}
                 >
                   {item.label}

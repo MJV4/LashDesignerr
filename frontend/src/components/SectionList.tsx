@@ -19,7 +19,7 @@ export function SecaoDeLista({ titulo, itens }: SecaoDeListaProps) {
             className="max-w-120 min-w-50 fw-bold flex items-start gap-3 p-4 bg-yellow-100 border border-yellow-300 rounded-3xl shadow-sm hover:shadow-md transition duration-200"
           >
             <CheckCircle className="text-yellow-600 mt-1" size={20} />
-            <span className="text-gray-800 leading-relaxed0">{item}</span>
+            <span className="text-gray-800 leading-relaxed">{item}</span>
           </li>
         ))}
       </ul>

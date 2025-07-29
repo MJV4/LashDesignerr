@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 import { Inicio } from "./components/Inicio";
-import { Cadastro } from "./components/Cadastro"; // certifique-se de que esse é o nome correto
+import { Cadastro } from "./components/Cadastro";
 import "./App.css";
 import { Navigate } from "react-router-dom";
 import { Curso } from "./components/Curso";
